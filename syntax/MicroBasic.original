@@ -1,0 +1,37 @@
+" Vim syntax file
+
+" Language: Roboteq controller basic language
+
+" Maintainer: Cbass
+
+" Latest Revision: 22 Feb 2019
+
+
+if exists("b:current_syntax")
+
+  finish
+
+endif
+
+
+
+"Comments 01 02 03 04
+
+"Numbers 0x 0b
+
+"Operators1 ( ) , / + - * &lt  &gt  = [ ]
+
+
+
+syn keyword mbsLanguageKeywords And AndWhile As Boolean Continue Dim Do Else ElseIf End Evaluate Exit Explicit False For GoSub GoTo If Integer Loop Mod Next Not Option Or Print Return Step Terminate Then To ToBool True Until While XOr
+
+
+
+syn keyword mbsLanguageKeywords1 SetConfig SetCommand GetConfig GetValue SetTimerCount SetTimerState GetTimerCount GetTimerState Wait Abs Atan Cos Sin Sqrt SetCANCommand SetCANConfig FetchCANValue FetchCANConfig IsCANValueReady IsCANConfigReady ReadCANValue ReadCANConfig ScanCANValue IsScannedCANReady ReadScannedCANValue IsCANNodeAlive SetCANCommand
+
+
+
+let b:current_syntax='MicroBasic'
+
+
+
