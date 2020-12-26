@@ -42,7 +42,7 @@ function! snipMate#expandSnip(snip, version, col) abort
 
 	" Open any folds snippet expands into
 	if &foldenable
-		silent! exec lnum . ',' . (lnum + len(snipLines) - 1) . 'foldopen'
+		silent! exec lnum . 'foldopen!'
 	endif
 
 	aug snipmate_changes
@@ -504,7 +504,7 @@ fun! s:ChooseSnippet(snippets) abort
 		let snippet += [i.'. '.snip]
 		let i += 1
 	endfor
-	if len(snippet) == 1
+	if len(snippet) == 1 || get(g:snipMate, 'always_choose_first', 0) == 1
 		" there's only a single snippet, choose it
 		let idx = 0
 	else
